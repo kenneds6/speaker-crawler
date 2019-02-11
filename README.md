@@ -1,7 +1,7 @@
 # Speaker Crawler Platform
 Automate Smart Speaker Data Collection.  
 
-<img src=/home/scramblesuit/PycharmProjects/speaker-crawler/echo.jpg />.
+<img src=echo.jpg />.
 
 This platform allows for automatic generation and collection of network traffic data from smart assistant-enabled speakers like the Amazon Echo and the Google Home.  Audio files are generated corresponding to queries (like 'Alexa, what is the weather today?').  These files are played from a regular speaker initiating an interaction between the speaker and the smart speaker.  At the same time a network sniffer is started on the AP the smart speaker is connected to.  The network traffic associated with the interaction is saved to a pcap file.  
 
