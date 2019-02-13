@@ -61,14 +61,16 @@ if __name__ == "__main__":
                 file = open(f_name, 'wb')
                 file.write(response['AudioStream'].read())
                 file.close()
+                # print("Audio file generated.  Saved to data/voice_queries/")
             elif salli:
-                f_name = 'voice_queries/amazon/polly/sally/_' + q_file + "_.mp3"
+                f_name = 'voice_queries/amazon/polly/salli/_' + q_file + "_.mp3"
                 response = polly_client.synthesize_speech(VoiceId='Salli',
                                                           OutputFormat='mp3',
                                                           Text=text_to_read + "              ")
                 file = open(f_name, 'wb')
                 file.write(response['AudioStream'].read())
                 file.close()
+                # print("Audio file generated.  Saved to data/voice_queries/")
             elif matt:
                 f_name = 'voice_queries/amazon/polly/matt/_' + q_file + "_.mp3"
                 response = polly_client.synthesize_speech(VoiceId='Matthew',
@@ -77,6 +79,7 @@ if __name__ == "__main__":
                 file = open(f_name, 'wb')
                 file.write(response['AudioStream'].read())
                 file.close()
+                # print("Audio file generated.  Saved to data/voice_queries/")
             elif joey:
                 f_name = 'voice_queries/amazon/polly/joey/_' + q_file + "_.mp3"
                 response = polly_client.synthesize_speech(VoiceId='Joey',
@@ -85,7 +88,10 @@ if __name__ == "__main__":
                 file = open(f_name, 'wb')
                 file.write(response['AudioStream'].read())
                 file.close()
+                # print("Audio file generated.  Saved to data/voice_queries/")
         else:
             f_name = 'voice_queries/amazon/google_voice_default/_' + q_file + "_.mp3"
             tts = gTTS(text=text_to_read, lang='en')
             tts.save(f_name)
+            # print("Audio file generated.  Saved to data/voice_queries/")
+    print('Audio Files Generated and Saved to voice_queries/')

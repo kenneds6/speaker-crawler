@@ -49,5 +49,6 @@ if __name__ == "__main__":
     for idx, q in enumerate(q_files):
         driver(query_directory + q_files[idx], float(q_times[idx]), q_names[idx].replace(" ", "_") + '_', device_ip,
                n_iter)
+        # print(q, query_directory + q_files[idx], float(q_times[idx]), q_names[idx].replace(" ", "_") + '_', device_ip)
 
 
