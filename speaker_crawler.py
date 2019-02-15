@@ -12,7 +12,7 @@ def driver(query_path, q_time, q_name, device_ip, iterations):
         q_time = q_time + 1
         print('Starting capture...')
         capture = subprocess.Popen("sudo timeout " + str(q_time) + " tcpdump -i " + str(interface) + " -n host " + str(
-            device_ip) + " -w " + "/home/pi/Desktop/speaker-crawler-master/output/" + str(q_name) + str(
+            device_ip) + " -w " + "output/" + str(q_name) + str(
             i) + "_" + ".pcap", shell=True)
         time.sleep(1)
         print('Playing audio query...')
