@@ -47,8 +47,5 @@ if __name__ == "__main__":
     q_files = sorted(q_files, key=lambda s: s.casefold())
     n_iter = int(args.iter)
     for idx, q in enumerate(q_files):
-        # driver(query_directory + q_files[idx], float(q_times[idx]), q_names[idx].replace(" ", "_") + '_', device_ip,
-        #        n_iter)
-        print(q, query_directory + q_files[idx], float(q_times[idx]), q_names[idx].replace(" ", "_") + '_', device_ip)
-
-
+        driver(query_directory + q_files[idx], float(q_times[idx]), q_names[idx].replace(" ", "_") + '_', device_ip,
+               n_iter)
