@@ -34,7 +34,7 @@ def driver(query_path, q_time, q_name, device_ip, iterations):
 
 
 if __name__ == "__main__":
-    # CLI Argumeny parsing
+    # CLI Argument parsing
     parser = argparse.ArgumentParser()
     parser.add_argument('csv',
                         help='A CSV File that contains the columns Query and Time, corresponding to the query and '
